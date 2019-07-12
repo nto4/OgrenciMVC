@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciMVC", "OgrenciMVC\OgrenciMVC.csproj", "{48BEACE4-61A9-4A76-8BD4-CFBE02BD20A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{1D125691-8F9D-420C-A575-4B59CEF97CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolServer", "ConsolServer\ConsolServer.csproj", "{CF16725F-0E69-4A13-B9C8-7E0EE7C2554F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48BEACE4-61A9-4A76-8BD4-CFBE02BD20A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BEACE4-61A9-4A76-8BD4-CFBE02BD20A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BEACE4-61A9-4A76-8BD4-CFBE02BD20A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BEACE4-61A9-4A76-8BD4-CFBE02BD20A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D125691-8F9D-420C-A575-4B59CEF97CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D125691-8F9D-420C-A575-4B59CEF97CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D125691-8F9D-420C-A575-4B59CEF97CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D125691-8F9D-420C-A575-4B59CEF97CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF16725F-0E69-4A13-B9C8-7E0EE7C2554F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF16725F-0E69-4A13-B9C8-7E0EE7C2554F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF16725F-0E69-4A13-B9C8-7E0EE7C2554F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF16725F-0E69-4A13-B9C8-7E0EE7C2554F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85E050EC-153C-43BD-BC35-5885063D1D18}
+	EndGlobalSection
+EndGlobal
