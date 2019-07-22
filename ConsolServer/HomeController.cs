@@ -5,15 +5,18 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using OgrenciMVC.Models;
 using OgrenciMVC.Repository;
 
 namespace ConsolServer
 {
-   
-        public class HomeController : ApiController
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    public class HomeController : ApiController
         {
-             IRepostory<OgrModel> _Repostory = new OgrRepostory();
+        //chrome-extension://aejoelaoggembcahagimdiliamlcdmfm/restlet_client.html
+        IRepostory<OgrModel> _Repostory = new OgrRepostory();
             // GET: api/Home
            // readonly IRepostory<OgrModel> _Repostory;
             //public HomeController(IRepostory<OgrModel> ogrenci)
@@ -22,6 +25,7 @@ namespace ConsolServer
 
             //    _Repostory = ogrenci;
             //}
+            
             public IEnumerable<OgrModel> Get()
             {
                 return _Repostory.GetAll();
@@ -32,7 +36,7 @@ namespace ConsolServer
             {
                 return _Repostory.GetbyId(id);
             }
-
+            
             // POST: api/Home
             public bool Post([FromBody]OgrModel ogrenci)
             {

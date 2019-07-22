@@ -5,20 +5,26 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using OgrenciMVC.Models;
 using System.Configuration;
-using System.Web.Configuration;
+using System.Configuration;
 
 namespace OgrenciMVC.Repository
 {
     public class OgrRepostory : IRepostory<OgrModel>
     {
+        readonly string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
         /*
-         repositoyry ler gelicek
+         
+         repositoys
              */
+       
+        [System.Web.Http.Cors.EnableCors(origins: "*", headers: "*", methods: "*")]
         public IEnumerable<OgrModel> GetAll()
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {//"datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"
                 //WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString 
+                //Console.WriteLine(connectionString);
+                Console.WriteLine(con);
                 con.Open();
                 var cmd = new MySqlCommand("SELECT * FROM ogrenciler ", con);
 
@@ -42,7 +48,7 @@ namespace OgrenciMVC.Repository
         }
         public OgrModel GetbyId(int Id)
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 con.Open();
                 var cmd = new MySqlCommand("SELECT * FROM ogrenciler WHERE Id=" +Id, con);
@@ -64,7 +70,7 @@ namespace OgrenciMVC.Repository
 
         public void Delete(int Id)
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 con.Open();
                 var cmd = new MySqlCommand("DELETE FROM ogrenciler WHERE Id = " + Id, con);
@@ -76,7 +82,7 @@ namespace OgrenciMVC.Repository
 
         public void Insert(OgrModel ogrenci)
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 con.Open();
                 var cmd = new MySqlCommand("INSERT INTO Ogrenciler (Ad , Soyad,Tc) VALUES (@Ad,  @Soyad, @Tc)", con);
@@ -99,8 +105,8 @@ namespace OgrenciMVC.Repository
         public void
             Edit(OgrModel ogrenci)
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
-                {
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
                     con.Open();
                     var cmd = new MySqlCommand("UPDATE Ogrenciler SET Ad = @Ad, Soyad =  @Soyad, Tc= @Tc WHERE Id = @Id", con);
                     cmd.Parameters.AddWithValue("Id", ogrenci.Id);

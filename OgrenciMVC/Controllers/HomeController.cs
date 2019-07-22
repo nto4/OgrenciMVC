@@ -7,9 +7,11 @@ using System.Web.Mvc;
 using OgrenciMVC.Models;
 using OgrenciMVC.Repository;
 using System.Net;
+using System.Web.Http.Cors;
 
 namespace OgrenciMVC.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class HomeController : Controller
     {
         IRepostory<OgrModel>  _Repostory;
