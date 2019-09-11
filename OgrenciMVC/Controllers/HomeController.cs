@@ -27,7 +27,7 @@ namespace OgrenciMVC.Controllers
             return View(ogrenciler);
             /*
 
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"))
                 //try
                 {
                 con.Open();
@@ -95,7 +95,7 @@ namespace OgrenciMVC.Controllers
             /*
             if (ModelState.IsValid)
             {
-                using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+                using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"))
                 {
                     con.Open();
                     var cmd = new MySqlCommand("UPDATE Ogrenciler SET Ad = @Ad, Soyad =  @Soyad, Tc= @Tc WHERE Id = @Id", con);
@@ -118,7 +118,7 @@ namespace OgrenciMVC.Controllers
         /*
         public ActionResult Insert()
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"))
             {
                 con.Open();
                 var cmd = new MySqlCommand("INSERT INTO Ogrenciler (Ad = @Ad, Soyad =  @Soyad, Tc= @Tc) VALUES Id = @Id", con);
@@ -146,7 +146,7 @@ namespace OgrenciMVC.Controllers
             return RedirectToAction("Index");
 
             /*
-                        using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+                        using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"))
             {
                 con.Open();
                 var cmd = new MySqlCommand("INSERT INTO Ogrenciler (Ad , Soyad,Tc) VALUES (@Ad,  @Soyad, @Tc)", con);
@@ -165,7 +165,7 @@ namespace OgrenciMVC.Controllers
         /*
         public ActionResult Update(int Id, string Ad, string Soyad, string Tc)
         {
-            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"))
+            using (var con = new MySqlConnection("datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"))
             {
                 con.Open();
                 var cmd = new MySqlCommand("UPDATE Ogrenciler SET Ad = @Ad, Soyad =  @Soyad, Tc= @Tc WHERE Id = @Id", con);

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MySql.Data.MySqlClient;
 using OgrenciMVC.Models;
-using System.Configuration;
 using System.Configuration;
 
 namespace OgrenciMVC.Repository
@@ -21,7 +18,7 @@ namespace OgrenciMVC.Repository
         public IEnumerable<OgrModel> GetAll()
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
-            {//"datasource=localhost;port=3306;Database=ogrdb;username=root;password=123456789"
+            {//"datasource=localhost;port=3306;Database=ogrdb;username=root;password=1234"
                 //WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString 
                 //Console.WriteLine(connectionString);
                 Console.WriteLine(con);
